@@ -23,7 +23,7 @@ The backend is structured around a FastAPI application, serving as a REST API.
 1. **Data Structure Optimization**: I attempted to optimize the QRangeStore data structure, which originally performed lookups in O(n) time. By redesigning it into an interval tree and later a binary tree, the goal was to decrease lookup times significantly. However, the practical implementation showed that the original linear structure was faster after endpoint tests.
 2. **Ghost POST Request Bug**: A notable issue in the backend involved an unexpected ghost POST request during the generation of a new simulation. This bug seems to trigger an additional, unintended API call, which could affect performance and result in erroneous data processing. Due to time constraints, I could not solve this issue. Addressing this would involve looking into the request lifecycle and the front-end interactions.
 
-## Novel Features
+## New Features
 
 - **Caching using Hashes**: I used SHA256 for generating unique identifiers for simulation conditions to implement caching, ensuring quick data retrieval and avoiding repetitive calculations. If the scope of this project were scaled up, then this could serve as the foundation of a central database to store previously requested simulations.
 - **Adaptability in Input Conditions**: The system's design to accept and validate dynamic input conditions allows for flexibility, making the simulation tool more versatile.
@@ -46,7 +46,7 @@ The frontend of the project is designed to provide an interactive visualization 
 1. **Integration with Backend**: Initial challenges included setting up an efficient communication pathway between the frontend and backend, which was addressed by implementing a React context that fetches and stores data from the backend. However, more seamless integration for real-time data updates and error handling could enhance the robustness.
 2. **Enhancing Visualizations**: Integrating Plotly and ThreeJS posed initial challenges due to their complex APIs and the need to synchronize React's reactivity with these libraries.
 
-## Novel Features
+## New Features
 
 - **Dual Visualization Approach**: Combining Plotly for detailed static analysis and ThreeJS for dynamic, real-time animations provides a comprehensive view of the simulation, catering to both detailed examination and educational demonstration purposes.
 - **Context-Based State Management**: Using React context to manage and propagate simulation data across components reduces coupling and enhances maintainability.
