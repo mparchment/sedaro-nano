@@ -1,8 +1,12 @@
 # Setup
 
 1. Clone this repository.
-2. To compile and run the app, execute the following command
+2. To compile and run the server, execute the following command
    - ```docker compose up app```
+3. To compile and run the client, execute the following commands
+   - ```cd app```
+   - ```npm i```
+   - ```npm start```
 
 ## Note - Generating Simulations
 

@@ -5,11 +5,9 @@ services:
     container_name: app
     build: .
     ports:
-      - "3000:3000" # React app
-      - "8000:8000" # FastAPI
+      - "8000:8000"
     environment:
       - CHOKIDAR_USEPOLLING=true
     volumes:
       - ./app/:/app/
-      - /app/node_modules/
-    command: sh -c "uvicorn server:app --host 0.0.0.0 --port 8000 --reload & npm start"
+    command: sh -c "uvicorn server:app --host 0.0.0.0 --port 8000 --reload"
