@@ -4,6 +4,10 @@
 2. To compile and run the app, execute the following command
    - ```docker compose up app```
 
+## Note - Generating Simulations
+
+A simulation must be generated twice to get the correct results. This is due to a bug in the backend that causes an additional POST request to be made. The first simulation generates the results, while the second simulation fetches the results from the cache.
+
 # Backend Architecture and Implementation
 
 The backend is structured around a FastAPI application, serving as a REST API.
